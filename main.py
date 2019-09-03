@@ -150,18 +150,6 @@ def ein_help():
 
   return info
 
-    
-    elif num[0].lower() == 'c':
-      num = 0
-      f.write(str(num))
-      f.close()
-      return "Balance has been cleared"
-    
-    else:
-      f.close()
-      return "Invalid Selection"
- 
-    f.close()
 ##########################################################################
 
 keep_alive()

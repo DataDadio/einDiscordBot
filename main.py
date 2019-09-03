@@ -39,13 +39,6 @@ async def on_message(message):
 
   if message.content.startswith("!einhelp"):
     await message.channel.send(ein_help())
-  
-#  if message.content.startswith("!treasury"):
-    searchCrit = message.content[10:]
-    await message.channel.send(treasury(searchCrit))
-  
-
-
 
 ########################################################################
 
@@ -157,31 +150,6 @@ def ein_help():
 
   return info
 
-#def treasury(num):
-
-
-  with open('treasure_chest.txt') as f:
-
-    for line in f:
-      fields = line.strip().split()
-    
-    curnum = 0
-
-    if num[0] == "+":
-      num = int(num[1:]) + int(fields[0])
-      f.write(str(num))
-      f.close()
-      return "Current Balance" + str(num)
-    
-    elif num[0] == "-":
-      num = curnum - int(num[1:])
-      f.write(str(num))
-      f.close()
-      return "Current Balance: " + str(num)
-    
-    elif num[0].lower() == 'b':
-      
-      return (fields[0])
     
     elif num[0].lower() == 'c':
       num = 0

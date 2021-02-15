@@ -153,5 +153,5 @@ def ein_help():
 ##########################################################################
 
 keep_alive()
-token = os.environ.get("DISCORD_BOT_SECRET")
+token = os.environ.get(NjAzMzU2MDQ2ODQ4ODE5MjIw.XTeNGw.0ZdbKrI1OXRCWQ38TKhNRu8Zc-Q)
 client.run(token)

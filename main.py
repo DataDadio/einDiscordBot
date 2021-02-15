@@ -2,7 +2,8 @@ import discord
 import os
 from keep_alive import keep_alive
 import wikipedia
-import wikia 
+import wikia
+from boto.s3.connection import S3Connection
 
 ###########################################################################
 
@@ -153,5 +154,5 @@ def ein_help():
 ##########################################################################
 
 keep_alive()
-token = os.environ.get("EIN_TOKEN")
+token = S3Connection(os.environ['EIN_TOKEN'])
 client.run(token)

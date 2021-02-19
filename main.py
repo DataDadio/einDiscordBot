@@ -154,5 +154,5 @@ def ein_help():
 ##########################################################################
 
 keep_alive()
-token = S3Connection(os.environ['EIN_TOKEN'])
+token = os.environ.get("DISCORD_BOT_SECRET")
 client.run(token)
